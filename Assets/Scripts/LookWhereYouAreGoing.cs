@@ -12,6 +12,7 @@ public class LookWhereYouAreGoing : Align
         if (velocity.magnitude == 0)
         {
             SteeringOutput result = new SteeringOutput();
+            character.rotation = 0;
             result.linear = Vector3.zero;
             result.angular = 0;
             return result;

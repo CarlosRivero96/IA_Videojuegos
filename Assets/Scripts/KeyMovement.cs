@@ -40,8 +40,10 @@ public class KeyMovement : MonoBehaviour
         
         velocity.Normalize();
         velocity *= maxSpeed;
-        
-        result.velocity = velocity;
+        if (Input.GetKey(KeyCode.LeftControl))
+            result.velocity = velocity*1.5f;
+        else
+            result.velocity = velocity;
         result.rotation = 0;
         character.updateK(result);
 
