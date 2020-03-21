@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{DBF26D6C-F1F5-0E0B-E92F-74173DDDEB91}</ProjectGuid>
+    <ProjectGuid>{E226675D-7AB3-0A53-1AB3-130E475BE356}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -71,6 +71,7 @@
      <Compile Include="Assets\Scripts\LookWhereYouAreGoing.cs" />
      <Compile Include="Assets\Scripts\Node.cs" />
      <Compile Include="Assets\Scripts\ObstacleAvoidance.cs" />
+     <Compile Include="Assets\Scripts\oreBehaviour.cs" />
      <Compile Include="Assets\Scripts\pathFind.cs" />
      <Compile Include="Assets\Scripts\Projectile.cs" />
      <Compile Include="Assets\Scripts\Pursue.cs" />
@@ -79,6 +80,7 @@
      <Compile Include="Assets\Scripts\State.cs" />
      <Compile Include="Assets\Scripts\StateMachine.cs" />
      <Compile Include="Assets\Scripts\StateMining.cs" />
+     <Compile Include="Assets\Scripts\StateWaiting.cs" />
      <Compile Include="Assets\Scripts\StateWalkToChest.cs" />
      <Compile Include="Assets\Scripts\StateWalkToMine.cs" />
      <Compile Include="Assets\Scripts\SteeringOutput.cs" />
@@ -90,19 +92,19 @@
      <Compile Include="Assets\Scripts\VelocityMatching.cs" />
      <Compile Include="Assets\Scripts\Wander.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>D:/Carlos/Documents/Unity Projects/Mi juego cul/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>D:/Carlos/Documents/Unity Projects/IA_Videojuegos/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>D:/Carlos/Documents/Unity Projects/Mi juego cul/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>D:/Carlos/Documents/Unity Projects/IA_Videojuegos/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>D:/Carlos/Documents/Unity Projects/Mi juego cul/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>D:/Carlos/Documents/Unity Projects/IA_Videojuegos/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>D:/Carlos/Documents/Unity Projects/Mi juego cul/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>D:/Carlos/Documents/Unity Projects/IA_Videojuegos/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>D:/Carlos/Documents/Unity Projects/Mi juego cul/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>D:/Carlos/Documents/Unity Projects/IA_Videojuegos/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>D:/Program Files (x86)/Unity/2018.4.15f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -306,13 +308,13 @@
  <HintPath>D:/Program Files (x86)/Unity/2018.4.15f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
- <HintPath>D:/Carlos/Documents/Unity Projects/Mi juego cul/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+ <HintPath>D:/Carlos/Documents/Unity Projects/IA_Videojuegos/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>D:/Carlos/Documents/Unity Projects/Mi juego cul/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>D:/Carlos/Documents/Unity Projects/IA_Videojuegos/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
- <HintPath>D:/Carlos/Documents/Unity Projects/Mi juego cul/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+ <HintPath>D:/Carlos/Documents/Unity Projects/IA_Videojuegos/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>D:/Program Files (x86)/Unity/2018.4.15f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

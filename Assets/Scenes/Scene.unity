@@ -10433,7 +10433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8639673a76ccb104dbaee6e87054b4d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 25173371}
   maxAcceleration: 3
   character: {fileID: 25173373}
 --- !u!114 &25173377
@@ -13164,7 +13164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8639673a76ccb104dbaee6e87054b4d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 271894084}
   maxAcceleration: 3
   character: {fileID: 271894086}
 --- !u!114 &271894090
@@ -14515,6 +14515,7 @@ GameObject:
   m_Component:
   - component: {fileID: 476812127}
   - component: {fileID: 476812126}
+  - component: {fileID: 476812128}
   m_Layer: 0
   m_Name: OreGold
   m_TagString: OreGold
@@ -14584,6 +14585,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &476812128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476812125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f572e7bdae33d42a4d1128a0c8fa85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  delay: 45
+  activeSprite: {fileID: 21300000, guid: 81dcaa5dd5258de4f9223da081f326dd, type: 3}
+  inactiveSprite: {fileID: 21300000, guid: adce90cba44a845419869703c972595f, type: 3}
+  activeTag: OreGold
 --- !u!1 &488074759
 GameObject:
   m_ObjectHideFlags: 0
@@ -15974,6 +15992,7 @@ GameObject:
   m_Component:
   - component: {fileID: 521956370}
   - component: {fileID: 521956369}
+  - component: {fileID: 521956371}
   m_Layer: 0
   m_Name: OreDiamond (1)
   m_TagString: OreDiamond
@@ -16043,6 +16062,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &521956371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521956368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f572e7bdae33d42a4d1128a0c8fa85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  delay: 60
+  activeSprite: {fileID: 21300000, guid: e7c2c6a14df98f34aaa07717fc274222, type: 3}
+  inactiveSprite: {fileID: 21300000, guid: adce90cba44a845419869703c972595f, type: 3}
+  activeTag: OreDiamond
 --- !u!1 &523431669
 GameObject:
   m_ObjectHideFlags: 0
@@ -17691,6 +17727,7 @@ GameObject:
   m_Component:
   - component: {fileID: 721825750}
   - component: {fileID: 721825749}
+  - component: {fileID: 721825751}
   m_Layer: 0
   m_Name: OreGold (1)
   m_TagString: OreGold
@@ -17760,6 +17797,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &721825751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721825748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f572e7bdae33d42a4d1128a0c8fa85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  delay: 45
+  activeSprite: {fileID: 21300000, guid: 81dcaa5dd5258de4f9223da081f326dd, type: 3}
+  inactiveSprite: {fileID: 21300000, guid: adce90cba44a845419869703c972595f, type: 3}
+  activeTag: OreGold
 --- !u!1 &725948213
 GameObject:
   m_ObjectHideFlags: 0
@@ -22481,6 +22535,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1081030315}
   - component: {fileID: 1081030314}
+  - component: {fileID: 1081030316}
   m_Layer: 0
   m_Name: OreDiamond
   m_TagString: OreDiamond
@@ -22550,6 +22605,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1081030316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081030313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f572e7bdae33d42a4d1128a0c8fa85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  delay: 60
+  activeSprite: {fileID: 21300000, guid: e7c2c6a14df98f34aaa07717fc274222, type: 3}
+  inactiveSprite: {fileID: 21300000, guid: adce90cba44a845419869703c972595f, type: 3}
+  activeTag: OreDiamond
 --- !u!1 &1081275629
 GameObject:
   m_ObjectHideFlags: 0
@@ -22651,6 +22723,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1082640780}
   - component: {fileID: 1082640779}
+  - component: {fileID: 1082640781}
   m_Layer: 0
   m_Name: OreIron
   m_TagString: OreIron
@@ -22720,6 +22793,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1082640781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082640778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f572e7bdae33d42a4d1128a0c8fa85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  delay: 30
+  activeSprite: {fileID: 21300000, guid: 8348a1d8f6831054ab4555d953a4db08, type: 3}
+  inactiveSprite: {fileID: 21300000, guid: adce90cba44a845419869703c972595f, type: 3}
+  activeTag: OreIron
 --- !u!1 &1100500304
 GameObject:
   m_ObjectHideFlags: 0
@@ -31425,6 +31515,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1690514788}
   - component: {fileID: 1690514787}
+  - component: {fileID: 1690514789}
   m_Layer: 0
   m_Name: OreIron (1)
   m_TagString: OreIron
@@ -31494,6 +31585,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1690514789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690514786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f572e7bdae33d42a4d1128a0c8fa85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  delay: 30
+  activeSprite: {fileID: 21300000, guid: 8348a1d8f6831054ab4555d953a4db08, type: 3}
+  inactiveSprite: {fileID: 21300000, guid: adce90cba44a845419869703c972595f, type: 3}
+  activeTag: OreIron
 --- !u!1 &1715091886
 GameObject:
   m_ObjectHideFlags: 0

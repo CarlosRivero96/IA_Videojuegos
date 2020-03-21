@@ -32,7 +32,7 @@ public class StateMachine : MonoBehaviour
         // Creates States
         StateWalkToChest walkToChest = new StateWalkToChest(gameObject, walkToChestTrans);
         StateMining mining = new StateMining(gameObject, miningTrans, "Mining");
-        StateMining waiting = new StateMining(gameObject, waitingTrans, "Waiting");
+        StateWaiting waiting = new StateWaiting(gameObject, waitingTrans, "Waiting");
         
 
         if (Object.Equals(gameObject.name, "Miner (iron)"))
@@ -79,15 +79,17 @@ public class StateMachine : MonoBehaviour
         // Check if we have a transition to fire.
         if (triggered != null)
         {
+            Debug.Log("exit: " + currentState.name);
+            currentState.getExitActions();
             //State targetState = null;
             // Find the target state.
             string targetStateStr = triggered.getTargetState();
-            Debug.Log(targetStateStr);
+            //Debug.Log(targetStateStr);
             foreach(State state in states)
             {
                 if (Object.Equals(state.name, targetStateStr))
                     {
-                        Debug.Log(state.name);
+                        //Debug.Log(state.name);
                         currentState = state;
                         break;
                     }

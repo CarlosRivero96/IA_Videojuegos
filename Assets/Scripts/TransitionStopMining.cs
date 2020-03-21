@@ -23,6 +23,7 @@ public class TransitionStopMining : Transition
     public override string getTargetState()
     {
         change = true;
+        
         return "WalkToChest";
     }
     public override void getActions()

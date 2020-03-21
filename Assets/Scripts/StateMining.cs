@@ -5,6 +5,8 @@ public class StateMining : State
 {
     List<Transition> transitions = new List<Transition>();
     GameObject character;
+    GameObject ore;
+    bool setOre = true;
 
     public StateMining(GameObject character, List<Transition> trans, string name)
     {
@@ -15,6 +17,11 @@ public class StateMining : State
 
     public override void getActions()
     {
+        if (setOre)
+        {
+            this.ore = character.GetComponent<pathFind>().target;
+            this.setOre = false;
+        }
         character.GetComponent<pathFind>().target = character;
         return;
     }
@@ -24,6 +31,8 @@ public class StateMining : State
     }
     public override void getExitActions()
     {
+        this.ore.GetComponent<oreBehaviour>().active = false;
+        this.setOre = true;
         return;
     }
     public override List<Transition> getTransitions()

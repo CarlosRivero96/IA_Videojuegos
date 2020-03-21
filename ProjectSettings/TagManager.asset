@@ -10,6 +10,7 @@ TagManager:
   - OreGold
   - OreDiamond
   - OreChest
+  - OreInactive
   layers:
   - Default
   - TransparentFX
