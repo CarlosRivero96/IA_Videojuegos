@@ -12,8 +12,17 @@ public class StateMachine : MonoBehaviour
     List<Transition> miningTrans = new List<Transition>();
     List<Transition> walkToChestTrans = new List<Transition>();
     List<Transition> waitingTrans = new List<Transition>();
+    List<Transition> hidingTrans = new List<Transition>();
+    List<Transition> sleepingTrans = new List<Transition>();
+    List<Transition> wanderTrans = new List<Transition>();
+    List<Transition> walkingTrans = new List<Transition>();
+    public GameObject spawn;
 
 
+
+    // For Monster
+    public int placesVisited;
+    public GameObject zzz;
 
     public void Start()
     {
@@ -23,39 +32,82 @@ public class StateMachine : MonoBehaviour
         Transition stopMining = new TransitionStopMining();
         Transition startWait = new TransitionStartWait(gameObject);
         Transition stopWait = new TransitionStopWait(gameObject);
+        Transition alerted = new TransitionAlerted(gameObject);
+        Transition wakeUp = new TransitionWakeUp(gameObject);
+        Transition sleep = new TransitionSleep(gameObject);
+        Transition goToSleep = new TransitionGoToSleep(gameObject);
+        Transition backToMining = new TransitionBackToMining(gameObject);
+
 
         walkToMineTrans.Add(startMining);
+        walkToMineTrans.Add(alerted);
+
         miningTrans.Add(stopMining);
+        miningTrans.Add(alerted);
+
         walkToChestTrans.Add(startWait);
+        walkToChestTrans.Add(alerted);
+
         waitingTrans.Add(stopWait);
+        waitingTrans.Add(alerted);
+
+        hidingTrans.Add(backToMining);
+
+        sleepingTrans.Add(wakeUp);
+
+        walkingTrans.Add(sleep);
+
+        wanderTrans.Add(goToSleep);
+
 
         // Creates States
         StateWalkToChest walkToChest = new StateWalkToChest(gameObject, walkToChestTrans);
         StateMining mining = new StateMining(gameObject, miningTrans, "Mining");
         StateWaiting waiting = new StateWaiting(gameObject, waitingTrans, "Waiting");
+        StateHiding hiding = new StateHiding(gameObject, hidingTrans);
         
+        StateWaiting sleeping = new StateWaiting(gameObject, sleepingTrans, "Sleeping");
+        StateWander wander = new StateWander(gameObject, wanderTrans);
+        StateWaiting walking = new StateWaiting(gameObject, walkingTrans, "Walking");
+
 
         if (Object.Equals(gameObject.name, "Miner (iron)"))
         {
             StateWalkToMine ironMiner = new StateWalkToMine(gameObject, gameObject.GetComponent<pathFind>().graph, "OreIron", walkToMineTrans);
             initialState = ironMiner;
             states.Add(ironMiner);
+            states.Add(walkToChest);
+            states.Add(mining);
+            states.Add(waiting);
+            states.Add(hiding);
         }
         else if (Object.Equals(gameObject.name, "Miner (gold)"))
         {
             StateWalkToMine goldMiner = new StateWalkToMine(gameObject, gameObject.GetComponent<pathFind>().graph, "OreGold", walkToMineTrans);
             initialState = goldMiner;
             states.Add(goldMiner);
+            states.Add(walkToChest);
+            states.Add(mining);
+            states.Add(waiting);
+            states.Add(hiding);
         }
         else if (Object.Equals(gameObject.name, "Miner (diamond)"))
         {
             StateWalkToMine diamondMiner = new StateWalkToMine(gameObject, gameObject.GetComponent<pathFind>().graph, "OreDiamond", walkToMineTrans);
             initialState = diamondMiner;
             states.Add(diamondMiner);
+            states.Add(walkToChest);
+            states.Add(mining);
+            states.Add(waiting);
+            states.Add(hiding);
         }
-        states.Add(walkToChest);
-        states.Add(mining);
-        states.Add(waiting);
+        else if (Object.Equals(gameObject.name, "Monster"))
+        {
+            initialState = sleeping;
+            states.Add(sleeping);
+            states.Add(wander);
+            states.Add(walking);
+        }
 
         currentState = initialState;
     }
@@ -94,6 +146,8 @@ public class StateMachine : MonoBehaviour
                         break;
                     }
             }
+            Debug.Log("enter: " + currentState.name);
+
 
             // Add the exit action of the old state, the transition action
             // and the entry for the new state.

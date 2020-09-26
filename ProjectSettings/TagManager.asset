@@ -11,6 +11,9 @@ TagManager:
   - OreDiamond
   - OreChest
   - OreInactive
+  - HidingSpot
+  - Miner
+  - Sound
   layers:
   - Default
   - TransparentFX

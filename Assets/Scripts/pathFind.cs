@@ -235,6 +235,5 @@ public class pathFind : MonoBehaviour
             character.velocity = Vector3.zero;
 
         }
-
     }
 }
